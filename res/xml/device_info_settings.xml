@@ -29,13 +29,13 @@
                     android:targetClass="android.romstats.AnonymousStats" />
         </PreferenceScreen>
 
-        <!-- LiquidSmooth Updates -->
-        <PreferenceScreen android:key="liquidsmooth_updates"
-                android:title="@string/liquidsmoothupdate_settings_title"
-                android:summary="@string/liquidsmoothupdate_settings_summary">
+        <!-- CentauriROM Updates -->
+        <PreferenceScreen android:key="centauri_updates"
+                android:title="@string/centauriupdate_settings_title"
+                android:summary="@string/centauriupdate_settings_summary">
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.liquid.updater"
-                    android:targetClass="com.liquid.updater.UpdatesSettings" />
+                    android:targetPackage="com.centauri.updater"
+                    android:targetClass="com.centauri.updater.UpdatesSettings" />
         </PreferenceScreen>
 
         <!-- Change Log -->
