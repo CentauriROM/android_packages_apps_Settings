@@ -14,7 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.settings.centauri;
+package com.android.settings.Centauri;
+
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -46,21 +52,16 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import java.io.BufferedOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.File;
-import java.io.FileWriter;
-
+import com.android.settings.Centauri.util.CMDProcessor;
+import com.android.settings.Centauri.util.Helpers;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.centauri.util.CMDProcessor;
-import com.android.settings.centauri.util.Helpers;
 
 public class PropModder extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "PropModder";
+
     private static final String APPEND_CMD = "echo \"%s=%s\" >> /system/build.prop";
     private static final String KILL_PROP_CMD = "busybox sed -i \"/%s/D\" /system/build.prop";
     private static final String REPLACE_CMD = "busybox sed -i \"/%s/ c %s=%s\" /system/build.prop";
@@ -176,7 +177,7 @@ public class PropModder extends PreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.propmodder);
+        addPreferencesFromResource(R.xml.prop_modder);
         prefSet = getPreferenceScreen();
 
         mWifiScanPref = (ListPreference) prefSet.findPreference(WIFI_SCAN_PREF);
