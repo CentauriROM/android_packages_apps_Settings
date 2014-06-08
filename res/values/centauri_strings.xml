@@ -213,7 +213,7 @@
     <string name="power_menu_summary">Change or view order of global power menu</string>
     <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
 
-	<!-- Progress bar -->
+    <!-- Progress bar -->
     <string name="progressbar_title">Progress bar</string>
     <string name="progressbar_summary">Customize appearance of the progress bars</string>
     <string name="progressbar_mirror_title">Mirror mode</string>
@@ -419,7 +419,7 @@
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
     <string name="lockscreen_icon_title">Lock handle icon</string>
     <string name="lockscreen_lock_icon_custom">Custom icon</string>
-    <string name="lockscreen_lock_icon_centauri">Centauriicon</string>
+    <string name="lockscreen_lock_icon_centauri">CentauriROM icon</string>
     <string name="lockscreen_lock_icon_default">Default icon</string>
     <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
     <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
@@ -439,7 +439,7 @@
     <string name="lockscreen_camera_widget_title">Enable camera widget</string>
     <string name="lockscreen_allow_all_title">Allow all widgets</string>
     <string name="lockscreen_allow_all_summary">Allow legacy widgets for placement</string>
-    <string name="lockscreen_allow_all_warning">Some widgets may not behave as expected when placed on the lock screen.  Other widgets may expose your personal data to anyone who accesses your device.  Please be mindful of these warnings before continuing.</string>
+    <string name="lockscreen_allow_all_warning">Some widgets may not behave as expected when placed on the lock screen. Other widgets may expose your personal data to anyone who accesses your device. Please be mindful of these warnings before continuing.</string>
     <string name="lockscreen_camera_widget_summary">Show camera widget on lock screen</string>
     <string name="lockscreen_maximize_widgets_title">Start maximized</string>
     <string name="lockscreen_maximize_widgets_summary">Show lock screen widget maximized</string>
@@ -472,7 +472,7 @@
     <string name="unlock_menu_unlock_title">Menu unlock</string>
     <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
 
-	<!-- Notification peek -->
+<!-- Notification peek -->
     <string name="notification_peek_title">Notification peek</string>
     <string name="notification_peek_summary">Show notifications by picking up device</string>
 
@@ -484,7 +484,7 @@
     <string name="shake_to_secure_title">Shake to secure</string>
     <string name="shake_to_secure_summary">Security is disabled after each unlock</string>
     <string name="shake_to_secure_dlg_title">Warning:</string>
-    <string name="shake_to_secure_dlg_message">Your device will be insecure until you explicitly shake to enable a temporary secure lock.  Once secure: if your device is successfully unlocked it will become insecure until you shake again.</string>
+    <string name="shake_to_secure_dlg_message">Your device will be insecure until you explicitly shake to enable a temporary secure lock. Once secure: if your device is successfully unlocked it will become insecure until you shake again.</string>
     <string name="shake_secure_timeout_title">Automatically resecure</string>
     <string name="shake_all">Shake any direction</string>
     <string name="shake_horizontal">Shake horizontally</string>
@@ -687,7 +687,7 @@
     <string name="system_power_crt_mode_both">Collapse orientation dependent</string>
     <string name="system_power_crt_mode_scale">Scale down</string>
 
-    <!-- Keyboard and Input methods  -->
+    <!-- Keyboard and Input methods -->
     <string name="title_keyboard_input">Advanced options</string>
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
     <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
@@ -698,7 +698,7 @@
     <string name="keyboard_rotation_toggle_summary">Force auto-rotate when keyboard is shown</string>
     <string name="keyboard_rotation_timeout_title">Auto-rotate timeout</string>
     <string name="keyboard_rotation_timeout_summary">Disables auto-rotate sensor <xliff:g id="rotate_timeout">%1$s</xliff:g> seconds after keyboard is hidden</string>
-    <string name="keyboard_rotation_dialog">This feature forces auto-rotate to turn on temporarily while the keyboard is shown.  It has no effect when auto-rotate is already enabled.</string>
+    <string name="keyboard_rotation_dialog">This feature forces auto-rotate to turn on temporarily while the keyboard is shown. It has no effect when auto-rotate is already enabled.</string>
     <string name="show_enter_key_title">Show enter key</string>
     <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
     <string name="ime_switcher_notify">Selector notification</string>
@@ -912,7 +912,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shortcut_action_help_button">button</string>
     <string name="shortcut_action_help_app">app</string>
     <string name="shortcut_action_help_icon">, while selecting the icon will bring up customization options</string>
-    <string name="shortcut_action_help_main">To add a %1$s, select the Add icon.  Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right.  Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the Reset icon.</string>
+    <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the Reset icon.</string>
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
 
@@ -985,7 +985,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shortcuts_color_mode_title">Icon color mode</string>
     <string name="shortcuts_color_mode_summary">Change the shorcuts icon color mode</string>
 
-    <!-- Notification drawer settings  -->
+    <!-- Notification drawer settings -->
     <string name="notification_drawer_qs_title">Notification &amp; QS drawer</string>
     <string name="notification_drawer_title">Notification drawer</string>
     <string name="notification_shortcuts_settings_title">Shortcuts</string>
@@ -1028,7 +1028,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_style_reset_message">Reset all battery colors?</string>
 
     <!-- Category title for power sound notification specific Settings.
-         [CHAR LIMIT=40] -->
+[CHAR LIMIT=40] -->
     <string name="power_notifications_category_title">Power connectivity alert</string>
     <!-- Sound settings, power notifications enable/disable, setting check box label -->
     <string name="power_notifications_enable_title">Enable</string>
@@ -1380,7 +1380,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="device_hostname">Device hostname</string>
 
     <!-- Chamber of Secrets -->
-    <string name="chamber_title">CentauriDungeon</string>
+    <string name="chamber_title">CentauriROM Dungeon</string>
     <string name="chamber_toast">The Dungeon has opened</string>
 
     <!-- Volume Keys Media Control -->
@@ -1671,9 +1671,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_runtime_warning_title">Warning</string>
     <string name="custom_runtime_warning_message">ART is not supported by CentauriROM. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
 
-    <!-- OTA App -->
-    <string name="ota_app">CentauriROM Updates</string>
-    <string name="ota_app_summary">Check for ROM updates</string>
+    <!-- CentauriROM Updater -->
+    <string name="centauriupdate_settings_title">CentauriROM Updates</string>
+    <string name="centauriupdate_settings_summary">Check for, view or install updates</string>
 
     <!-- Vibration multiplier -->
     <string name="vibrator_multiplier_title">Vibration multiplier</string>
@@ -1752,12 +1752,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
 
-	<!-- CentauriROM Anonymous Stats -->
+<!-- CentauriROM Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">CentauriROM Statistics</string>
     <string name="rominfo_settings_list_item_summary">Help make CentauriROM better by opting into anonymous statistics reporting</string>
 
     <!-- Changelog -->
-    <string name="changelog_title">CentauriChangelog</string>
+    <string name="changelog_title">CentauriROM Changelog</string>
     <string name="changelog_title_summary">View recent changes to CentauriROM</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
     <string name="changelog_error">Unable to load changelog</string>
