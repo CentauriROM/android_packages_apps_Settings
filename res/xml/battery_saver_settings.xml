@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2013 The OmniROM Project
+<!-- Copyright (C) 2014 CentauriROM
 
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 2 of the License, or
-  (at your option) any later version.
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+          http://www.apache.org/licenses/LICENSE-2.0
 
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- -->
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:key="interface_battery_saver_key"
@@ -26,11 +25,11 @@
         android:title="@string/pref_battery_saver_enable_title"
         android:summary="@string/pref_battery_saver_enable_summary"  />
 
-    <com.android.settings.liquid.TimeRangePreference
+    <com.android.settings.centauri.TimeRangePreference
         android:key="pref_battery_saver_timerange"
         android:dependency="pref_battery_saver_enable" />
 
-    <com.android.settings.liquid.SeekBarPreference
+    <com.android.settings.centauri.SeekBarPreference
         android:key="pref_battery_saver_mode_change_delay"
         android:persistent="false"
         android:title="@string/pref_battery_saver_mode_change_delay_title"
@@ -43,20 +42,20 @@
         android:defaultValue="5"
         android:dependency="pref_battery_saver_enable" />
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_show_toast"
         android:title="@string/pref_battery_saver_toast_title"
         android:summary="@string/pref_battery_saver_toast_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_screen_off"
         android:defaultValue="true"
         android:title="@string/pref_battery_saver_screen_off_title"
         android:summary="@string/pref_battery_saver_screen_off_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_ignore_locked"
         android:defaultValue="true"
         android:title="@string/pref_battery_saver_ignore_locked_title"
@@ -67,13 +66,13 @@
             android:key="category_battery_saver_battery"
             android:title="@string/battery_saver_battery_title" />
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_battery_mode"
         android:title="@string/pref_battery_saver_battery_title"
         android:summary="@string/pref_battery_saver_battery_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.SeekBarPreference
+    <com.android.settings.centauri.SeekBarPreference
         android:key="pref_battery_saver_mode_battery_level"
         android:persistent="false"
         android:title="@string/pref_battery_saver_mode_battery_level_title"
@@ -174,7 +173,7 @@
         android:dependency="pref_battery_saver_enable"
         android:title="@string/pref_battery_saver_cpu_title"
         android:summary="@string/pref_battery_saver_cpu_summary"
-        android:fragment="com.android.settings.liquid.BatteryCpuSettings" />
+        android:fragment="com.android.settings.centauri.BatteryCpuSettings" />
 
     <CheckBoxPreference
         android:key="pref_battery_saver_mode_bluetooth"
@@ -190,19 +189,19 @@
         android:summary="@string/pref_battery_saver_location_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_wifi_mode"
         android:title="@string/pref_battery_saver_wifi_title"
         android:summary="@string/pref_battery_saver_wifi_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_sync_mode"
         android:title="@string/pref_battery_saver_sync_title"
         android:summary="@string/pref_battery_saver_sync_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.GlobalCheckBoxPreference
+    <com.android.settings.centauri.GlobalCheckBoxPreference
         android:key="battery_saver_killall_mode"
         android:title="@string/pref_battery_saver_killall_title"
         android:summary="@string/pref_battery_saver_killall_summary"
@@ -229,7 +228,7 @@
         android:summary="@string/pref_battery_saver_brightness_summary"
         android:dependency="pref_battery_saver_enable"/>
 
-    <com.android.settings.liquid.SeekBarPreference
+    <com.android.settings.centauri.SeekBarPreference
         android:key="pref_battery_saver_mode_brightness_level"
         android:persistent="false"
         android:title="@string/pref_battery_saver_mode_brightness_level_title"

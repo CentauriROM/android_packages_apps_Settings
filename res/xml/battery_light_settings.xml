@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2014 CentauriROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,17 +37,17 @@
         android:key="colors_list"
         android:title="@string/battery_light_list_title" >
 
-        <com.android.settings.liquid.notificationlight.ApplicationLightPreference
+        <com.android.settings.centauri.notificationlight.ApplicationLightPreference
             android:key="low_color"
             android:title="@string/battery_light_low_color_title"
             android:persistent="false" />
 
-        <com.android.settings.liquid.notificationlight.ApplicationLightPreference
+        <com.android.settings.centauri.notificationlight.ApplicationLightPreference
             android:key="medium_color"
             android:title="@string/battery_light_medium_color_title"
             android:persistent="false" />
 
-        <com.android.settings.liquid.notificationlight.ApplicationLightPreference
+        <com.android.settings.centauri.notificationlight.ApplicationLightPreference
             android:key="full_color"
             android:title="@string/battery_light_full_color_title"
             android:persistent="false" />

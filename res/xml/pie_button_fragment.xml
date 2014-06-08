@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 SlimRoms
+<!-- Copyright (C) 2014 CentauriROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,13 +19,13 @@
 
     <PreferenceScreen
         android:key="pie_button_style"
-        android:fragment="com.android.settings.liquid.PieButtonStyleSettings"
+        android:fragment="com.android.settings.centauri.PieButtonStyleSettings"
         android:title="@string/pie_button_style"
         android:summary="@string/pie_button_style_summary" />
 
     <PreferenceScreen
             android:key="pie_button_second_layer"
-            android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
+            android:fragment="com.android.settings.centauri.dslv.ButtonsListViewSettings"
             android:title="@string/pie_button_second_layer"
             android:summary="@string/pie_button_second_layer_summary">
         <extra android:name="buttonMode" android:value="2" />

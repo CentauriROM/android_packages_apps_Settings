@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!-- Copyright (C) 2014 CentauriROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,10 +17,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <PreferenceScreen android:key="liquid_logo"
-                          android:layout="@layout/liquid_logo_row" />
+        <PreferenceScreen android:key="centauri_logo"
+                          android:layout="@layout/centauri_logo_row" />
 
-        <!-- Liquid Anonymous Stats -->
+        <!-- CentauriROM Anonymous Stats -->
        <PreferenceScreen android:key="rominfo_settings"
             android:title="@string/rominfo_settings_list_item_title"
             android:summary="@string/rominfo_settings_list_item_summary">
@@ -33,7 +33,7 @@
         <PreferenceScreen android:key="changelog"
             android:title="@string/changelog_title"
             android:summary="@string/changelog_title_summary"
-            android:fragment="com.android.settings.liquid.ChangeLog" >
+            android:fragment="com.android.settings.centauri.ChangeLog" >
         </PreferenceScreen>
 
         <!-- Device status - launches activity -->

@@ -173,9 +173,9 @@
 
         <!-- Action shortcuts -->
         <activity
-            android:name="CreateLiquidShortcut"
+            android:name="CreateCentauriShortcut"
             android:label="@string/shortcut_picker_title"
-            android:icon="@drawable/ic_liquid_theme_settings"
+            android:icon="@drawable/ic_centauri_theme_settings"
             android:theme="@style/Theme.DialogWhenLarge"
             android:excludeFromRecents="true"
             android:configChanges="orientation|keyboardHidden|screenSize" >
@@ -186,9 +186,9 @@
         </activity>
 
         <activity
-            android:name=".liquid.LiquidActionShortcut"
+            android:name=".centauri.CentauriActionShortcut"
             android:theme="@android:style/Theme.NoDisplay"
-            android:icon="@drawable/liquid_lock"
+            android:icon="@drawable/centauri_lock"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance" >
             <intent-filter>
@@ -198,33 +198,33 @@
 
         <!-- QuietHours SmsCall Service -->
 
-        <service android:name=".liquid.service.SmsCallService"/>
-        <service android:name=".liquid.service.AlarmService"/>
+        <service android:name=".centauri.service.SmsCallService"/>
+        <service android:name=".centauri.service.AlarmService"/>
 
         <receiver
-            android:name=".liquid.service.AlarmReceiver">
+            android:name=".centauri.service.AlarmReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
                 <action android:name="android.intent.action.TIME_CHANGED"></action>
                 <action android:name="android.intent.action.DATE_CHANGED"></action>
-                <action android:name="com.android.settings.liquid.service.SCHEDULE_SERVICE_COMMAND"/>
+                <action android:name="com.android.settings.centauri.service.SCHEDULE_SERVICE_COMMAND"/>
             </intent-filter>
         </receiver>
 
         <receiver
-            android:name=".liquid.service.BootReceiver">
+            android:name=".centauri.service.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
         <activity
-            android:name=".liquid.service.BypassAlarm"
+            android:name=".centauri.service.BypassAlarm"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:taskAffinity="com.android.settings.liquid.service.BypassAlarm"
+            android:taskAffinity="com.android.settings.centauri.service.BypassAlarm"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <!-- Wireless Controls -->
@@ -1730,13 +1730,13 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <activity android:name=".liquid.AutoBrightnessSetup"
+        <activity android:name=".centauri.AutoBrightnessSetup"
                 android:excludeFromRecents="true"
                 android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
 
-        <activity android:name=".liquid.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".centauri.gestureanywhere.GestureAnywhereBuilderActivity" />
 
-        <activity android:name=".liquid.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+        <activity android:name=".centauri.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <activity android:name=".ApnEditor" />
 
@@ -1752,7 +1752,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.blacklist.BlacklistSettings" />
+                android:value="com.android.settings.centauri.blacklist.BlacklistSettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/security_settings" />
         </activity>
@@ -1767,7 +1767,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.QuietHours" />
+                android:value="com.android.settings.centauri.QuietHours" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to quick tiles settings -->
@@ -1780,7 +1780,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.quicksettings.QuickSettingsTiles" />
+                android:value="com.android.settings.centauri.quicksettings.QuickSettingsTiles" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to battery icon settings -->
@@ -1793,12 +1793,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.BatteryIconStyle" />
+                android:value="com.android.settings.centauri.BatteryIconStyle" />
         </activity>
 
-        <activity android:name=".liquid.LockscreenButtons" />
+        <activity android:name=".centauri.LockscreenButtons" />
 
-        <activity android:name=".liquid.WakeLockBlocker" />
+        <activity android:name=".centauri.WakeLockBlocker" />
 
         <activity android:name=".util.ShowBuildProp" />
 
@@ -1813,7 +1813,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.DisplayRotation" />
+                android:value="com.android.settings.centauri.DisplayRotation" />
         </activity>
 
         <!-- RAM bar -->
@@ -1824,7 +1824,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.RamBar" />
+                android:value="com.android.settings.centauri.RamBar" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to sound packages settings -->
@@ -1869,7 +1869,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.liquid.ShakeEvents" />
+                android:value="com.android.settings.centauri.ShakeEvents" />
         </activity>
 
         <activity android:name="Settings$DataUsageSummaryActivity"
@@ -2012,20 +2012,20 @@
         </receiver>
 
         <receiver
-            android:name="com.android.settings.liquid.batterysaver.BootReceiver">
+            android:name="com.android.settings.centauri.batterysaver.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
         <receiver
-            android:name="com.android.settings.liquid.batterysaver.BatterySaverReceiver">
+            android:name="com.android.settings.centauri.batterysaver.BatterySaverReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
                 <action android:name="android.intent.action.TIME_CHANGED"></action>
                 <action android:name="android.intent.action.DATE_CHANGED"></action>
                 <action android:name="android.intent.action.BATTERY_SERVICES"></action>
-                <action android:name="com.android.settings.liquid.batterysaver.SCHEDULE_BATTERY_SAVER"/>
+                <action android:name="com.android.settings.centauri.batterysaver.SCHEDULE_BATTERY_SAVER"/>
             </intent-filter>
         </receiver>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!-- Copyright (C) 2014 CentauriROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,9 +12,6 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
-
-     Copyright (C) 2009 Motorola, Inc.
-     March 23, 2009 - Motorola - Allow automatic brightness changes.
 -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,7 +33,7 @@
                 android:layout_marginRight="20dip"
                 android:text="@string/auto_brightness_adjustment_title" />
 
-        <com.android.settings.liquid.MagneticCenterSeekBar android:id="@+id/adjustment"
+        <com.android.settings.centauri.MagneticCenterSeekBar android:id="@+id/adjustment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dip"

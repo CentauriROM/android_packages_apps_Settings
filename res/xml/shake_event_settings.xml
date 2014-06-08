@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2013 SlimRoms Project
+<!-- Copyright (C) 2014 CentauriROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@
 
     <PreferenceScreen
         android:key="shake_events_disabled_apps"
-        android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
+        android:fragment="com.android.settings.centauri.dslv.ButtonsListViewSettings"
         android:title="@string/shake_events_disabled_title"
         android:summary="@string/shake_events_disabled_summary"
         android:dependency="enable_shake_events">
