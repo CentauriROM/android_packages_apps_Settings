@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.Centauri;
+package com.android.settings.centauri;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -52,8 +52,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.android.settings.Centauri.util.CMDProcessor;
-import com.android.settings.Centauri.util.Helpers;
+import com.android.settings.centauri.util.CMDProcessor;
+import com.android.settings.centauri.util.Helpers;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
