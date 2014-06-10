@@ -35,7 +35,7 @@
         settings:minimum="1"
         settings:unitsLeft="Speed: "
         settings:unitsRight=""
-        android:defaultValue="10" />
+        android:defaultValue="4" />
 
     <com.android.settings.centauri.SeekBarPreference
         android:key="progressbar_width"
@@ -68,7 +68,7 @@
         settings:minimum="1"
         settings:unitsLeft="Sections Count: "
         settings:unitsRight=""
-        android:defaultValue="6" />
+        android:defaultValue="3" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="progressbar_color_1"
