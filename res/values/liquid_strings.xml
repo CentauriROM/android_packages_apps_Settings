@@ -2081,6 +2081,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
 
     <!-- HOVER -->
+    <string name="hover_title">HOVER Settings</string>
     <string name="hover_enabled_title">HOVER</string>
     <string name="hover_enabled_summary">Enable PA\'s HOVER Notification System</string>
     <string name="hover_hide_button_title">Hide HOVER-Button</string>

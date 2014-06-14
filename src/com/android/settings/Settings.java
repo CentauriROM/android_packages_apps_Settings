@@ -85,7 +85,6 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
-<<<<<<< HEAD
 
 import com.android.settings.liquid.BatteryIconStyle;
 import com.android.settings.liquid.blacklist.BlacklistSettings;
