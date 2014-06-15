@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The LiquidSmooth Project
+ * Copyright (C) 2014 CentauriROM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.liquid;
+package com.android.settings.centauri;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -35,12 +35,12 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.view.Gravity;
 
-import com.android.internal.util.liquid.DeviceUtils;
+import com.android.internal.util.centauri.DeviceUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.settings.liquid.util.Helpers;
+import com.android.settings.centauri.util.Helpers;
 
 public class HoverSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
