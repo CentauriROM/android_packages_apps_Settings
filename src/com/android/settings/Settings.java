@@ -93,7 +93,10 @@ import com.android.settings.centauri.quicksettings.QuickSettingsTiles;
 import com.android.settings.centauri.ShakeEvents;
 import com.android.settings.centauri.QuietHours;
 import com.android.settings.centauri.themes.ThemeEnabler;
-
+import com.android.settings.profiles.AppGroupConfig;
+import com.android.settings.profiles.ProfileConfig;
+import com.android.settings.profiles.ProfileEnabler;
+import com.android.settings.profiles.ProfilesSettings;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
@@ -110,8 +113,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Top-level settings activity to handle single pane and double pane UI layout.
- */
+* Top-level settings activity to handle single pane and double pane UI layout.
+*/
 public class Settings extends PreferenceActivity
         implements ButtonBarHandler, OnAccountsUpdateListener {
 
@@ -408,9 +411,9 @@ public class Settings extends PreferenceActivity
     }
 
     /**
-     * Switch to parent fragment and store the grand parent's info
-     * @param className name of the activity wrapper for the parent fragment.
-     */
+* Switch to parent fragment and store the grand parent's info
+* @param className name of the activity wrapper for the parent fragment.
+*/
     private void switchToParent(String className) {
         final ComponentName cn = new ComponentName(this, className);
         try {
@@ -486,9 +489,9 @@ public class Settings extends PreferenceActivity
     }
 
     /**
-     * Checks if the component name in the intent is different from the Settings class and
-     * returns the class name to load as a fragment.
-     */
+* Checks if the component name in the intent is different from the Settings class and
+* returns the class name to load as a fragment.
+*/
     protected String getStartingFragmentClass(Intent intent) {
         if (mFragmentClass != null) return mFragmentClass;
 
@@ -506,9 +509,9 @@ public class Settings extends PreferenceActivity
     }
 
     /**
-     * Override initial header when an activity-alias is causing Settings to be launched
-     * for a specific fragment encoded in the android:name parameter.
-     */
+* Override initial header when an activity-alias is causing Settings to be launched
+* for a specific fragment encoded in the android:name parameter.
+*/
     @Override
     public Header onGetInitialHeader() {
         String fragmentClass = getStartingFragmentClass(super.getIntent());
@@ -550,6 +553,9 @@ public class Settings extends PreferenceActivity
                 BlacklistSettings.class.getName().equals(fragmentName) ||
                 BluetoothSettings.class.getName().equals(fragmentName) ||
                 DreamSettings.class.getName().equals(fragmentName) ||
+                ProfilesSettings.class.getName().equals(fragmentName) ||
+                ProfileConfig.class.getName().equals(fragmentName) ||
+                AppGroupConfig.class.getName().equals(fragmentName) ||
                 LocationSettings.class.getName().equals(fragmentName) ||
                 ToggleAccessibilityServicePreferenceFragment.class.getName().equals(fragmentName) ||
                 PrintSettingsFragment.class.getName().equals(fragmentName) ||
@@ -560,8 +566,8 @@ public class Settings extends PreferenceActivity
     }
 
     /**
-     * Populate the activity with the top-level headers.
-     */
+* Populate the activity with the top-level headers.
+*/
     @Override
     public void onBuildHeaders(List<Header> headers) {
         if (!onIsHidingHeaders()) {
@@ -748,7 +754,7 @@ public class Settings extends PreferenceActivity
             getPackageManager().getHomeActivities(homeApps);
             if (homeApps.size() < 2) {
                 // When there's only one available home app, omit this settings
-                // category entirely at the top level UI.  If the user just
+                // category entirely at the top level UI. If the user just
                 // uninstalled the penultimate home app candidiate, we also
                 // now tell them about why they aren't seeing 'Home' in the list.
                 if (sShowNoHomeNotice) {
@@ -757,7 +763,7 @@ public class Settings extends PreferenceActivity
                 }
                 return false;
             } else {
-                // Okay, we're allowing the Home settings category.  Tell it, when
+                // Okay, we're allowing the Home settings category. Tell it, when
                 // invoked via this front door, that we'll need to be told about the
                 // case when the user uninstalls all but one home app.
                 if (header.fragmentArguments == null) {
@@ -832,6 +838,7 @@ public class Settings extends PreferenceActivity
         private final WifiEnabler mWifiEnabler;
         private final BluetoothEnabler mBluetoothEnabler;
         public static ThemeEnabler mThemeEnabler;
+        private final ProfileEnabler mProfileEnabler;
         private AuthenticatorHelper mAuthHelper;
         private DevicePolicyManager mDevicePolicyManager;
 
@@ -852,7 +859,8 @@ public class Settings extends PreferenceActivity
                 return HEADER_TYPE_CATEGORY;
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
-                    || header.id == R.id.theme_settings) {
+                    || header.id == R.id.theme_settings
+                    || header.id == R.id.profiles_settings) {
                 return HEADER_TYPE_SWITCH;
             } else if (header.id == R.id.security_settings) {
                 return HEADER_TYPE_BUTTON;
@@ -899,6 +907,7 @@ public class Settings extends PreferenceActivity
             mWifiEnabler = new WifiEnabler(context, new Switch(context));
             mBluetoothEnabler = new BluetoothEnabler(context, new Switch(context));
             mThemeEnabler = new ThemeEnabler(context, new Switch(context));
+            mProfileEnabler = new ProfileEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
         }
 
@@ -972,6 +981,8 @@ public class Settings extends PreferenceActivity
                         mBluetoothEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.theme_settings) {
                         mThemeEnabler.setSwitch(holder.switch_);
+                    } else if (header.id == R.id.profiles_settings) {
+                        mProfileEnabler.setSwitch(holder.switch_);
                     }
                     updateCommonHeaderView(header, holder);
                     break;
@@ -1046,12 +1057,14 @@ public class Settings extends PreferenceActivity
             mWifiEnabler.resume();
             mBluetoothEnabler.resume();
             mThemeEnabler.resume();
+            mProfileEnabler.resume();
         }
 
         public void pause() {
             mWifiEnabler.pause();
             mBluetoothEnabler.pause();
             mThemeEnabler.resume();
+            mProfileEnabler.pause();
         }
     }
 
@@ -1127,8 +1140,8 @@ public class Settings extends PreferenceActivity
     }
 
     /*
-     * Settings subclasses for launching independently.
-     */
+* Settings subclasses for launching independently.
+*/
     public static class BluetoothSettingsActivity extends Settings { /* empty */ }
     public static class WirelessSettingsActivity extends Settings { /* empty */ }
     public static class TetherSettingsActivity extends Settings { /* empty */ }
@@ -1176,6 +1189,7 @@ public class Settings extends PreferenceActivity
     public static class TextToSpeechSettingsActivity extends Settings { /* empty */ }
     public static class AndroidBeamSettingsActivity extends Settings { /* empty */ }
     public static class WifiDisplaySettingsActivity extends Settings { /* empty */ }
+    public static class ProfilesSettingsActivity extends Settings { /* empty */ }
     public static class DreamSettingsActivity extends Settings { /* empty */ }
     public static class NotificationStationActivity extends Settings { /* empty */ }
     public static class UserSettingsActivity extends Settings { /* empty */ }

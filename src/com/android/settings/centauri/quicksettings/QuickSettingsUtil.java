@@ -60,6 +60,7 @@ import static com.android.internal.util.centauri.QSConstants.TILE_WIFIAP;
 import static com.android.internal.util.centauri.QSConstants.TILE_REBOOT;
 import static com.android.internal.util.centauri.QSConstants.TILE_FCHARGE;
 import static com.android.internal.util.centauri.QSConstants.TILE_ONTHEGO;
+import static com.android.internal.util.centauri.QSConstants.TILE_PROFILE;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -187,6 +188,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_ONTHEGO, R.string.title_tile_onthego,
                 "com.android.systemui:drawable/ic_qs_onthego"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_PROFILE, R.string.title_tile_profile,
+                "com.android.systemui:drawable/ic_qs_profiles"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_SHAKE, R.string.title_tile_shake,
                 "com.android.systemui:drawable/ic_qs_shake_events"));
