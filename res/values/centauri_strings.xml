@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- General strings -->
@@ -35,7 +34,6 @@
     <string name="build_date_default">2012-01-01-0000</string>
 
     <!-- Advanced titles -->
-    <string name="advanced_category_title">Advanced</string>
     <string name="advanced_options_title">Advanced options</string>
 
     <!-- Category titles -->
@@ -78,10 +76,6 @@
     <string name="theme_chooser_title">Theme chooser</string>
 
 <!-- INTERFACE START -->
-
-    <!-- Alternate resolver -->
-    <string name="alt_resolver_title">Alternate resolver</string>
-    <string name="alt_resolver_summary">Use alternate default app picking grid</string>
 
     <!-- Clock widget -->
     <string name="lock_clock_title">Clock widget</string>
@@ -421,7 +415,7 @@
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
     <string name="lockscreen_icon_title">Lock handle icon</string>
     <string name="lockscreen_lock_icon_custom">Custom icon</string>
-    <string name="lockscreen_lock_icon_centauri">CentauriROM icon</string>
+    <string name="lockscreen_lock_icon_liquid">Liquid icon</string>
     <string name="lockscreen_lock_icon_default">Default icon</string>
     <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
     <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
@@ -872,7 +866,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shortcut_action_power_off">Power off</string>
     <string name="shortcut_action_reboot">Reboot</string>
     <string name="shortcut_action_sound">Sound</string>
-    <string name="shortcut_action_profiles">Profiles</string>
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_home">Home</string>
     <string name="shortcut_action_back">Back</string>
@@ -1284,7 +1277,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_tile_long_press">Longpress:</string>
     <string name="custom_tile_null_warning">An action must be set first</string>
     <string name="custom_tile_resolve_name">Unknown</string>
-    <string name="title_tile_profile">Profile</string>
 
     <!-- QuickSettings style options -->
     <string name="quicksettings_tiles_style">Style</string>
@@ -1386,7 +1378,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="device_hostname">Device hostname</string>
 
     <!-- Chamber of Secrets -->
-    <string name="chamber_title">CentauriROM Dungeon</string>
+    <string name="chamber_title">Liquid Dungeon</string>
     <string name="chamber_toast">The Dungeon has opened</string>
 
     <!-- Volume Keys Media Control -->
@@ -1763,7 +1755,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="rominfo_settings_list_item_summary">Help make CentauriROM better by opting into anonymous statistics reporting</string>
 
     <!-- Changelog -->
-    <string name="changelog_title">CentauriROM Changelog</string>
+    <string name="changelog_title">Liquid Changelog</string>
     <string name="changelog_title_summary">View recent changes to CentauriROM</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
     <string name="changelog_error">Unable to load changelog</string>
@@ -2061,7 +2053,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="dt_tweaks_error">Startup tweaks error</string>
     <string name="dm_tweaks_error">It looks like startup tweaks isn\'t setup properly. Please contact your ROM developer.</string>
     <string name="db_exit">Exit</string>
-	
+
     <!--User preferences settings-->
     <string name="personalization">Personalization</string>
     <string name="reset_user_preferences_title">Reset Swipe left to float</string>
@@ -2081,143 +2073,24 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="expanded_desktop_status_bar">Status bar visible</string>
     <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
 
-    <!-- HOVER -->
-    <string name="hover_title">HOVER Settings</string>
-    <string name="hover_enabled_title">HOVER</string>
-    <string name="hover_enabled_summary">Enable PA\'s HOVER Notification System</string>
-    <string name="hover_hide_button_title">Hide HOVER-Button</string>
-    <string name="hover_hide_button_summary">Hide the HOVER-Button in the StatusBar</string>
-    <string name="hover_active_title">Activate HOVER</string>
-    <string name="hover_active_summary">This activates HOVER, as replacement of the button in StatusBar</string>
+    <!-- Hover settings -->
+    <string name="hover_title">Hover settings</string>
+    <string name="hover_summary">Enables and customize hover notifications</string>
+    <string name="hover_enabled_title">Enable Hover</string>
+    <string name="hover_enabled_summary">Enable the hover notification system</string>
+    <string name="hover_hide_button_title">Hide button</string>
+    <string name="hover_hide_button_summary">Hide the hover button in status bar</string>
+    <string name="hover_active_title">Activate Hover</string>
+    <string name="hover_active_summary">Use hover and hide status bar button</string>
+    <string name="hover_require_fullscreen_mode_title">Require Expanded Desktop</string>
+    <string name="hover_require_fullscreen_mode_summary">Only show up when StatusBar is hidden</string>
     <string name="hover_exclude_low_priority_title">Exclude low priority</string>
-    <string name="hover_exclude_low_priority_summary">Exclude notifications marked as low priority</string>
+    <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
-    <string name="hover_exclude_non_clearable_summary">Exclude not dismissable notifications</string>
-	
-    <!-- Sound settings screen -->
-    <string name="ring_mode_title">Ring mode</string>
-    <string name="ring_mode_normal">Normal</string>
-    <string name="ring_mode_vibrate">Vibrate</string>
-    <string name="ring_mode_mute">Mute</string>
+    <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
 
-    <!-- Profiles settings -->
-    <string name="profiles_settings_title">Profiles</string>
-    <string name="profiles_add">Add</string>
-    <string name="profile_menu_delete">Delete</string>
-    <string name="profile_settings_title">Profile</string>
-    <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
-    <string name="profile_trigger_configure">Configure trigger</string>
-    <string name="profile_triggers">Triggers</string>
-    <string name="profile_trigger_filter_all">All triggers</string>
-    <string name="profile_trigger_filter_wifi">Wi-Fi triggers</string>
-    <string name="profile_trigger_filter_bluetooth">Bluetooth triggers</string>
-    <string name="profile_write_nfc_tag">Write to NFC tag</string>
-    <string name="profile_write_touch_tag">Touch tag to write</string>
-    <string name="profile_write_success">Tag successfully written</string>
-    <string name="profile_write_failed">Tag writing failed!</string>
-    <string name="profile_selected">Profile selected: %1$s</string>
-    <string name="profile_nfc_text">Writing a profile to a NFC tag allows for tapping the tag to select the profile. Tapping a second time will 
-select the previously selected profile.</string>
-    <string name="profile_unknown_nfc_tag">Unknown profile</string>
-    <string name="profile_add_nfc_text">This NFC tag refers to an unknown profile. Attaching this NFC tag to an existing profile will allow for 
-selecting the profile in the future.</string>
-    <string name="profile_select">Select profile</string>
+    <!-- Liquid Extra Info -->
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
-    <!-- Add Profile -->
-    <string name="add_profile_dialog_title">Create new profile</string>
-    <string name="profile_name_title">Name</string>
-    <string name="profile_profile_name_prompt">Enter a name for the new profile</string>
-    <string name="menu_new_profile">New profile</string>
-    <string name="new_profile_name">&lt;new profile&gt;</string>
-
-    <!-- Rename Dialog -->
-    <string name="rename_dialog_title">Rename</string>
-    <string name="rename_dialog_message">Enter a new name</string>
-    <string name="duplicate_profile_name">Duplicate profile name!</string>
-    <string name="duplicate_appgroup_name">Duplicate app group name!</string>
-
-    <!-- Reset Profiles -->
-    <string name="profile_reset_title">Reset</string>
-    <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
-
-    <!-- Delete confimation messages -->
-    <string name="profile_delete_confirm">Delete this profile?</string>
-    <string name="profile_app_delete_confirm">Remove this app?</string>
-    <string name="profile_cannot_delete">An active profile cannot be deleted</string>
-
-    <!-- Profile network mode -->
-    <string name="profile_networkmode_2g">2G</string>
-    <string name="profile_networkmode_3g">3G</string>
-    <string name="profile_networkmode_2g3g">2G/3G</string>
-
-    <!-- Profile Config screen PreferenceGroup titles -->
-    <string name="profile_connectionoverrides_title">Connection overrides</string>
-    <string name="profile_volumeoverrides_title">Volume overrides</string>
-    <string name="connection_state_disabled">Disable</string>
-    <string name="connection_state_enabled">Enable</string>
-    <string name="volume_override_summary">Set to</string>
-
-    <!-- Menu item for managing profiles -->
-    <string name="profile_profiles_manage">Profiles</string>
-    <string name="profile_profile_manage">Manage profile</string>
-    <string name="profile_appgroups_manage">App groups</string>
-    <string name="profile_appgroup_manage">Manage app group</string>
-
-    <!-- Profile settings screen, section header for settings related to notification profiles -->
-    <string name="profile_settings">Profile settings</string>
-    <string name="profile_trigger_connect">On connect</string>
-    <string name="profile_trigger_disconnect">On disconnect</string>
-    <string name="profile_trigger_notrigger">No trigger</string>
-
-    <!-- Profile Settings sound modes labels -->
-    <string name="sound_mode">Notification mode</string>
-    <string name="ringer_mode">Ring mode</string>
-    <string name="lights_mode">Lights mode</string>
-    <string name="vibrate_mode">Vibrate mode</string>
-    <string name="choose_soundtone">Choose notification tone</string>
-    <string name="choose_ringtone">Choose ringtone</string>
-
-    <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
-    <string name="soundtone_title">Notification tone</string>
-    <string name="soundtone_summary" translatable="false">""</string>
-
-    <!-- Title for application group setting screen -->
-    <string name="profile_appgroups_title">App groups</string>
-    <string name="profile_applist_title">Apps</string>
-    <string name="profile_new_appgroup">New app group</string>
-    <string name="profile_delete_appgroup">Delete this app group?</string>
-    <string name="profile_appgroup_name_prompt">Enter a name for the new app group</string>
-    <string name="profile_appgroup_name_title">Name</string>
-
-    <!-- Add application dialog box title -->
-    <string name="profile_choose_app">Choose app</string>
-
-    <!-- Profile mode options. -->
-    <string name="profile_on">On</string>
-    <string name="profile_off">Off</string>
-    <string name="profile_no_override">No override</string>
-    <string name="profile_connection_disable">Disable</string>
-    <string name="profile_connection_enable">Enable</string>
-
-    <!-- Profiles - system settings -->
-    <string name="profile_system_settings_title">System settings</string>
-    <string name="profile_lockmode_title">Lock screen mode</string>
-    <string name="profile_lockmode_default">Default</string>
-    <string name="profile_lockmode_insecure">Insecure</string>
-    <string name="profile_lockmode_disabled">Disabled</string>
-    <string name="profile_lockmode_default_summary">Use system default</string>
-    <string name="profile_lockmode_insecure_summary">Use insecure lock screen</string>
-    <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
-    <string name="profile_airplanemode_title">Airplane mode</string>
-
-    <!-- Connection override toggles (not all are used at this time ) -->
-    <string name="toggleWifi">Wi-Fi</string>
-    <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
-    <string name="toggleBluetooth">Bluetooth</string>
-    <string name="toggleGPS">GPS</string>
-    <string name="toggleData">Mobile Data</string>
-    <string name="toggleSync">Data Sync</string>
-    <string name="toggle2g3g">2G/3G</string>
-    <string name="toggleNfc">NFC</string>
-	
 </resources>
