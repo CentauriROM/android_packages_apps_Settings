@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 CentauriROM
+ * Copyright (C) 2014 The LiquidSmooth Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,8 +52,6 @@ public class HoverSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.hover_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        //
 
         UpdateSettings();
     }

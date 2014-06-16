@@ -62,7 +62,7 @@
      	android:key="hover_settings"
         android:title="@string/hover_title"
         android:summary="@string/hover_summary"
-        android:fragment="com.android.settings.liquid.HoverSettings" />
+        android:fragment="com.android.settings.centauri.HoverSettings" />
 
     <PreferenceScreen
         android:key="navbar_targets_settings"

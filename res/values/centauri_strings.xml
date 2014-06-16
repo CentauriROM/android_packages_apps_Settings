@@ -415,7 +415,7 @@
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
     <string name="lockscreen_icon_title">Lock handle icon</string>
     <string name="lockscreen_lock_icon_custom">Custom icon</string>
-    <string name="lockscreen_lock_icon_liquid">Liquid icon</string>
+    <string name="lockscreen_lock_icon_centauri">CentauriROM icon</string>
     <string name="lockscreen_lock_icon_default">Default icon</string>
     <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
     <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
@@ -1378,7 +1378,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="device_hostname">Device hostname</string>
 
     <!-- Chamber of Secrets -->
-    <string name="chamber_title">Liquid Dungeon</string>
+    <string name="chamber_title">CentauriROM Dungeon</string>
     <string name="chamber_toast">The Dungeon has opened</string>
 
     <!-- Volume Keys Media Control -->
@@ -1755,7 +1755,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="rominfo_settings_list_item_summary">Help make CentauriROM better by opting into anonymous statistics reporting</string>
 
     <!-- Changelog -->
-    <string name="changelog_title">Liquid Changelog</string>
+    <string name="changelog_title">CentauriROM Changelog</string>
     <string name="changelog_title_summary">View recent changes to CentauriROM</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
     <string name="changelog_error">Unable to load changelog</string>
@@ -2089,7 +2089,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
     <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
 
-    <!-- Liquid Extra Info -->
+    <!-- CentauriROM Extra Info -->
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 

@@ -2036,8 +2036,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Liquid Extra info -->
-        <activity android:name="com.android.settings.liquid.extrainfo.MainActivity"
+        <!-- centauri Extra info -->
+        <activity android:name="com.android.settings.centauri.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

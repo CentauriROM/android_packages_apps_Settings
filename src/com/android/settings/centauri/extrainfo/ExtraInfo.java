@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.liquid.extrainfo;
+package com.android.settings.centauri.extrainfo;
 
 import android.app.Activity;
 import android.content.Context;
