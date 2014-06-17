@@ -68,7 +68,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
-    private static final String KEY_CENTAURIROM_UPDATES = "centauri_updates";
+    private static final String KEY_CENTAURI_UPDATES = "centauri_updates";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -99,7 +99,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-setValueSummary(KEY_MOD_VERSION, "ro.liquid.version");
+setValueSummary(KEY_MOD_VERSION, "ro.centauri.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
@@ -129,9 +129,9 @@ setValueSummary(KEY_MOD_VERSION, "ro.liquid.version");
 
         // Only the owner should see the Updater settings, if it exists
         if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            removePreferenceIfPackageNotInstalled(findPreference(KEY_CENTAURIROM_UPDATES));
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_CENTAURI_UPDATES));
         } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_CENTAURIROM_UPDATES));
+            getPreferenceScreen().removePreference(findPreference(KEY_CENTAURI_UPDATES));
         }
 
         /*
