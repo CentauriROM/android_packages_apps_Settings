@@ -232,14 +232,6 @@ public class ShakeEvents extends SettingsPreferenceFragment
         ShakeEvents getOwner() {
             return (ShakeEvents) getTargetFragment();
         }
-    }
-		
-    private void updateSystemPreferences() {
-        // Shake sensitivity
-        final int shakeSensitivity = Settings.System.getInt(getContentResolver(),
-                Settings.System.SHAKE_SENSITIVITY, 0);
-        mShakeSensitivity.setValue(shakeSensitivity + "");
-    }
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
