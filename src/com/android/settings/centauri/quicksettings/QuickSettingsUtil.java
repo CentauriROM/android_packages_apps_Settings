@@ -60,7 +60,7 @@ import static com.android.internal.util.centauri.QSConstants.TILE_WIFIAP;
 import static com.android.internal.util.centauri.QSConstants.TILE_REBOOT;
 import static com.android.internal.util.centauri.QSConstants.TILE_FCHARGE;
 import static com.android.internal.util.centauri.QSConstants.TILE_ONTHEGO;
-import static com.android.internal.util.centauri.QSConstants.TILE_PROFILE;
+import static com.android.internal.util.slim.QSConstants.TILE_PROFILE;
 
 import android.content.ContentResolver;
 import android.content.Context;

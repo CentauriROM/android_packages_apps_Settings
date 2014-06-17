@@ -48,6 +48,7 @@ public class ShakeEvents extends SettingsPreferenceFragment
         ShortcutPickerHelper.OnPickListener {
 
     private static final String KEY_ENABLE_SHAKE_EVENTS = "enable_shake_events";
+    private static final String SHAKE_SENSITIVITY = "shake_sensitivity";
     private static final String KEY_SHAKE_EVENT_X = "shake_event_x";
     private static final String KEY_SHAKE_EVENT_Y = "shake_event_y";
     private static final String KEY_SHAKE_EVENT_Z = "shake_event_z";
@@ -57,6 +58,7 @@ public class ShakeEvents extends SettingsPreferenceFragment
     private String mShakeEventPicked = null;
 
     private CheckBoxPreference mShakeEnabled;
+    private ListPreference mShakeSensitivity;
     private Preference mShakeX;
     private Preference mShakeY;
     private Preference mShakeZ;
@@ -99,6 +101,8 @@ public class ShakeEvents extends SettingsPreferenceFragment
     private void updateSettings() {
         mShakeEnabled.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.SHAKE_LISTENER_ENABLED, 0) == 1);
+        mShakeSensitivity = (ListPreference) findPreference(SHAKE_SENSITIVITY);
+        mShakeSensitivity.setOnPreferenceChangeListener(this);
         mShakeX.setSummary(returnFriendlyName(0));
         mShakeY.setSummary(returnFriendlyName(1));
         mShakeZ.setSummary(returnFriendlyName(2));
@@ -141,8 +145,14 @@ public class ShakeEvents extends SettingsPreferenceFragment
         if (preference == mShakeEnabled) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SHAKE_LISTENER_ENABLED, (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mShakeSensitivity) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SHAKE_SENSITIVITY, value);
+            return true;
         }
-        return true;
+        return false;
     }
 
     @Override
@@ -221,6 +231,14 @@ public class ShakeEvents extends SettingsPreferenceFragment
         ShakeEvents getOwner() {
             return (ShakeEvents) getTargetFragment();
         }
+    }
+		
+    private void updateSystemPreferences() {
+        // Shake sensitivity
+        final int shakeSensitivity = Settings.System.getInt(getContentResolver(),
+                Settings.System.SHAKE_SENSITIVITY, 0);
+        mShakeSensitivity.setValue(shakeSensitivity + "");
+    }
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {

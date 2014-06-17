@@ -823,7 +823,7 @@
         </activity-alias>
 
         <!-- Provide direct entry into manage apps showing running services.
-             This is for compatibility with old shortcuts. -->
+This is for compatibility with old shortcuts. -->
         <activity-alias android:name=".RunningServices"
                 android:label="@string/runningservices_settings_title"
                 android:exported="true"
@@ -835,7 +835,7 @@
         </activity-alias>
 
         <!-- Provide direct entry into manage apps showing storage usage for apps.
-             This is for compatibility with old shortcuts. -->
+This is for compatibility with old shortcuts. -->
         <activity-alias android:name=".applications.StorageUse"
                 android:label="@string/storageuse_settings_title"
                 android:exported="true"
@@ -846,9 +846,9 @@
                 android:resource="@id/application_settings" />
         </activity-alias>
 
-        <!-- Still need a top-level activity for showing app details.  Aliasing
-             trick is so the code that is now a fragment can still be called
-             InstalledAppDetails. -->
+        <!-- Still need a top-level activity for showing app details. Aliasing
+trick is so the code that is now a fragment can still be called
+InstalledAppDetails. -->
         <activity android:name=".applications.InstalledAppDetailsTop"
                   android:label="@string/application_info_label"
                   android:exported="true"
@@ -944,9 +944,9 @@
                 android:resource="@id/application_settings" />
         </activity>
 
-        <!-- Still need a top-level activity for showing app ops details.  Aliasing
-             trick is so the code that is now a fragment can still be called
-             AppOpsDetails. -->
+        <!-- Still need a top-level activity for showing app ops details. Aliasing
+trick is so the code that is now a fragment can still be called
+AppOpsDetails. -->
         <activity android:name=".applications.AppOpsDetailsTop"
                   android:label="@string/app_ops_settings"
                   android:exported="true"
@@ -1521,7 +1521,7 @@
 
         <!-- Development settings -->
 
-        <!-- DeviceInfo adds the user's requested build to stats upload.  -->
+        <!-- DeviceInfo adds the user's requested build to stats upload. -->
         <receiver android:name=".DeviceInfo$StatsReportReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.STATISTICS_REPORT" />
@@ -2036,7 +2036,7 @@
             </intent-filter>
         </activity>
 
-        <!-- centauri Extra info -->
+        <!-- CentauriROM Extra info -->
         <activity android:name="com.android.settings.centauri.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth">
             <intent-filter>
@@ -2069,7 +2069,7 @@
             </intent-filter>
         </receiver>
 
-        <!-- Watch for ContactsContract.Profile changes and update the user's photo.  -->
+        <!-- Watch for ContactsContract.Profile changes and update the user's photo. -->
         <receiver android:name=".users.ProfileUpdateReceiver">
             <intent-filter>
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />

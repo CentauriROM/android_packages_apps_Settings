@@ -68,7 +68,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
-    private static final String KEY_CENTAURI_UPDATES = "centauri_updates";
+    private static final String KEY_CENTAURIROM_UPDATES = "centauri_updates";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -99,7 +99,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-		setValueSummary(KEY_MOD_VERSION, "ro.centauri.version");
+setValueSummary(KEY_MOD_VERSION, "ro.liquid.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
@@ -114,7 +114,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
                 PROPERTY_SELINUX_STATUS);
 
-        // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
+// Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
                 PROPERTY_URL_SAFETYLEGAL);
 
@@ -129,15 +129,15 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
         // Only the owner should see the Updater settings, if it exists
         if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            removePreferenceIfPackageNotInstalled(findPreference(KEY_CENTAURI_UPDATES));
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_CENTAURIROM_UPDATES));
         } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_CENTAURI_UPDATES));
+            getPreferenceScreen().removePreference(findPreference(KEY_CENTAURIROM_UPDATES));
         }
 
         /*
-         * Settings is a generic app and should not contain any device-specific
-         * info.
-         */
+* Settings is a generic app and should not contain any device-specific
+* info.
+*/
         final Activity act = getActivity();
         // These are contained in the "container" preference group
         PreferenceGroup parentPreference = (PreferenceGroup) findPreference(KEY_CONTAINER);
@@ -281,11 +281,11 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     }
 
     /**
-     * Reads a line from the specified file.
-     * @param filename the file to read from
-     * @return the first line, if any.
-     * @throws IOException if the file couldn't be read
-     */
+* Reads a line from the specified file.
+* @param filename the file to read from
+* @return the first line, if any.
+* @throws IOException if the file couldn't be read
+*/
     private static String readLine(String filename) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
         try {
@@ -311,15 +311,15 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     public static String formatKernelVersion(String rawKernelVersion) {
         // Example (see tests for more):
         // Linux version 3.0.31-g6fb96c9 (android-build@xxx.xxx.xxx.xxx.com) \
-        //     (gcc version 4.6.x-xxx 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT \
-        //     Thu Jun 28 11:02:39 PDT 2012
+        // (gcc version 4.6.x-xxx 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT \
+        // Thu Jun 28 11:02:39 PDT 2012
 
         final String PROC_VERSION_REGEX =
             "Linux version (\\S+) " + /* group 1: "3.0.31-g6fb96c9" */
-            "\\((\\S+?)\\) " +        /* group 2: "x@y.com" (kernel builder) */
-            "(?:\\(gcc.+? \\)) " +    /* ignore: GCC version information */
-            "(#\\d+) " +              /* group 3: "#1" */
-            "(?:.*?)?" +              /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
+            "\\((\\S+?)\\) " + /* group 2: "x@y.com" (kernel builder) */
+            "(?:\\(gcc.+? \\)) " + /* ignore: GCC version information */
+            "(#\\d+) " + /* group 3: "#1" */
+            "(?:.*?)?" + /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
             "((Sun|Mon|Tue|Wed|Thu|Fri|Sat).+)"; /* group 4: "Thu Jun 28 11:02:39 PDT 2012" */
 
         Matcher m = Pattern.compile(PROC_VERSION_REGEX).matcher(rawKernelVersion);
@@ -331,15 +331,15 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
                     + " groups");
             return "Unavailable";
         }
-        return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
+        return m.group(1) + "\n" + // 3.0.31-g6fb96c9
             m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
-            m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
+            m.group(4); // Thu Jun 28 11:02:39 PDT 2012
     }
 
     /**
-     * Returns " (ENGINEERING)" if the msv file has a zero value, else returns "".
-     * @return a string to append to the model number description.
-     */
+* Returns " (ENGINEERING)" if the msv file has a zero value, else returns "".
+* @return a string to append to the model number description.
+*/
     private String getMsvSuffix() {
         // Production devices should have a non-zero value. If we can't read it, assume it's a
         // production device so that we don't accidentally show that it's an ENGINEERING device.
