@@ -2224,6 +2224,19 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="toggle2g3g">2G/3G</string>
     <string name="toggleNfc">NFC</string>
 
+    <!-- Protected Apps -->
+    <string name="menu_hidden_apps_delete">Reset</string>
+    <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
+    <string name="protected_apps">Protected apps</string>
+    <string name="saving_protected_components">Saving component state</string>
+	
+    <!-- Flip Tiles -->
+    <string name="flip_qs_tiles_title">Flip tiles</string>
+    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+	
+    <!-- Power Menu User Switcher -->
+    <string name="power_menu_user_title">Power menu user switcher</string>
+    <string name="power_menu_user_summary">Show a list of all users in power menu</string>
 
     <!-- CentauriROM Extra Info -->
     <string name="lsextrainfo">Extra information</string>
