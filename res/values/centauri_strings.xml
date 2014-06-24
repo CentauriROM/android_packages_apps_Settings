@@ -473,6 +473,7 @@
 <!-- Notification peek -->
     <string name="notification_peek_title">Notification peek</string>
     <string name="notification_peek_summary">Show notifications by picking up device</string>
+    <string name="notification_peek_disabled_summary">Peek is currently disabled, to re-enable turn off Active Display</string>
 
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
@@ -1754,6 +1755,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_off">Off</string>
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
+    <string name="ad_disabled_summary">Active Display is currently disabled, to re-enable turn off Peek</string>
 
 <!-- CentauriROM Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">CentauriROM Statistics</string>
@@ -2095,6 +2097,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
     <string name="hover_exclude_topmost_title">Exclude topmost app</string>
     <string name="hover_exclude_topmost_summary">Exclude notifications from the app running in foreground</string>
+    <string name="hover_long_fadeout_title">Hover notification time</string>
+    <string name="hover_long_fadeout_3seconds">3 seconds</string>
+    <string name="hover_long_fadeout_5seconds">5 seconds (default)</string>
+    <string name="hover_long_fadeout_7seconds">7 seconds</string>
+    <string name="hover_long_fadeout_10seconds">10 seconds</string>
+    <string name="hover_long_fadeout_15seconds">15 seconds</string>
 	
     <!-- CentauriROM Extra Info -->
     <string name="lsextrainfo">Extra information</string>
